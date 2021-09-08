@@ -1,0 +1,21 @@
+version: '3'
+services:
+  api:
+    build: ./api
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./api:/api
+
+  BDD:
+    image: mysql/mysql-server
+    ports:
+      - '33062:33062'
+    expose:
+      - '33062'
+    environment:
+      MYSQL_DATABASE: 'db'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+      # mysql -u root -p

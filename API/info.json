@@ -1,0 +1,53 @@
+{
+    "Podium": "BR8",
+    "Log in": [
+        "Nagasaki White and Red Tee"
+    ],
+    "Double money": ["Open Wheel Races"],
+    "Triple money": [
+        "Deadline",
+        "King of The Hill"
+    ],
+    "Discounts": {
+        "Cars": [
+            [
+                "R88",
+                2180500
+            ],
+            [
+                "Rampant Rocket",
+                647500
+            ],
+            [
+                "Hakuchou Drag",
+                683200
+            ],
+            [
+                "RE-7B",
+                1485000
+            ],
+            [
+                "Vindicator",
+                441000
+            ]
+        ],
+        "Properties": [
+            [
+                "Nightclubs",
+                40
+            ],
+            [
+                "Nightclubs Renovations",
+                30
+            ],
+            [
+                "Garages",
+                40
+            ],
+            [
+                "Large Special Cargo Warehouses",
+                30
+            ]
+        ]
+    }
+}
