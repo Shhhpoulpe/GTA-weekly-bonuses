@@ -4,18 +4,19 @@ import os
 
 app = FastAPI()
 
+#Function to get data from the JSON file with two parameters
 def get_weekly_info(categ1 = "all", categ2 = None):
     """
     Retourne la partie du JSON qui est utile à la page
     """
-    # Ouvre le JSON
+    # Open the JSON
     with open('info.json') as f:
         data_return = json.load(f)
-    # Vérifie que je veut toutes les données ou non
+    # Check if I want all the data or not
     if categ1 == "all":
         return data_return
     else:
-        # Vérifie si il y a une sous catégorie
+        # Check for a sub category
         if categ2:
             return data_return[categ1][categ2]
         else:
