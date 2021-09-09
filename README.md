@@ -10,6 +10,11 @@ docker-compose up
 
 ![Proof of run](images/CMD.png)
 
+
+# Schema
+
+![Proof of run](images/schema.png)
+
 # Endpoints
 
 ## /
