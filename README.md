@@ -1,6 +1,6 @@
 # GTA weekly bonuses
 
-This project is a Docker container with a python FastAPI which returns all of the weekly content available
+This project is a Docker container with a python FastAPI which returns all of the weekly content available on GTA online
 
 # How to run it?
 
