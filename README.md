@@ -43,4 +43,4 @@ Returns all the cars at a discount price and it's price
 
 ## /discounts/properties
 
-Returns all the properties at a discount price and it's price
+Returns all the properties at a discount price and it's discount % 
