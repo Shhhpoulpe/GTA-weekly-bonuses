@@ -1,8 +1,28 @@
 from fastapi import FastAPI
+import sqlalchemy as db
 import json
 import os
 
 app = FastAPI()
+
+config = {
+    'host': 'BDD',
+    'port': 33062,
+    'user': 'user',
+    'password': 'password',
+    'database': 'gta_week'
+}
+
+db_user = config.get('user')
+db_pwd = config.get('password')
+db_host = config.get('host')
+db_port = config.get('port')
+db_name = config.get('database')
+
+connection_str = f'mysql+pymysql://{db_user}:{db_pwd}@{db_host}:{db_port}/{db_name}'
+
+engine = db.create_engine(connection_str)
+connection = engine.connect()
 
 #Function to get data from the JSON file with two parameters
 def get_weekly_info(categ1 = "all", categ2 = None):
@@ -56,3 +76,11 @@ async def discounts_cars():
 async def discounts_Properties():
     response = get_weekly_info("Discounts","Properties")
     return response
+
+@app.get('/apitest')
+async def apitest():
+    metadata = db.MetaData(bind=engine)
+    metadata.reflect(only=['test_table'])
+
+    test_table = metadata.tables['test_table']
+    return test_table

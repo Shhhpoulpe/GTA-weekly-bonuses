@@ -1,14 +1,5 @@
 version: '3'
 services:
-  api:
-    build: ./api
-    ports:
-      - "5000:5000"
-    expose:
-      - '5000'
-    volumes:
-      - ./api:/api
-
   BDD:
     image: mysql/mysql-server
     ports:
@@ -23,3 +14,12 @@ services:
       # mysql -u root -p
     volumes:
       - ./BDD:/docker-entrypoint-initdb.d/:ro
+
+  api:
+    build: ./api
+    ports:
+      - "5000:5000"
+    expose:
+      - '5000'
+    volumes:
+      - ./api:/api

@@ -1,0 +1,2 @@
+GRANT SELECT ON *.* TO 'user'@'%';
+FLUSH PRIVILEGES;
